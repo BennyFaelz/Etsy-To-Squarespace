@@ -1,4 +1,4 @@
-#2019 BennyF github.com/BennyFaelz/Etsy-To-Squarespace
+#2019 BennyF
 import csv
 
 with open('etsy.csv', 'r') as csv_file: #you can change etsy.csv to whatever your file is called
@@ -24,9 +24,7 @@ with open('etsy.csv', 'r') as csv_file: #you can change etsy.csv to whatever you
 				tags = line[5]
 				Categories = "python" #Etsy does not have categories but you can set all your imported ones to have the same category to easily search for them
 				Visible = "FALSE"
-				#Dont know how to get images to work since they have to be Squarespace urls
-				#Images = line[7] + "\r" + line[8] + "\r" + line[9] + "\r" + line[10] + "\r" + line[11] + "\r" + line[12] + "\r" + line[13] + "\r" + line[14] + "\r" + line[15] + "\r" + line[16]
-				Images = ""
+				Images = line[7] + "\r" + line[8] + "\r" + line[9] + "\r" + line[10] + "\r" + line[11] + "\r" + line[12] + "\r" + line[13] + "\r" + line[14] + "\r" + line[15] + "\r" + line[16]
 				SKUN = 60000 + n #I don't use SKU's on my shop so I set them to a random number.
 				SKU = "SQ" + str(SKUN)
 				Price = line[2]
@@ -40,4 +38,4 @@ with open('etsy.csv', 'r') as csv_file: #you can change etsy.csv to whatever you
 				csv_writer.writerow([url, title, description, type, tags, Categories, Visible, Images, SKU, '', '', '', '', '', '', Price, '', '', '', '', '', '', Stock])
 			else:
 				print("Max of 200 has been reached. There is still " + str(sum(1 for line in csv_reader)) + " remaining rows.")
-				input("Press Enter to exit...")
+input("Press Enter to exit...")
