@@ -1,4 +1,4 @@
-#2019 BennyF
+#2019 BennyF - github.com/BennyFaelz/Etsy-To-Squarespace
 import csv
 
 with open('etsy.csv', 'r') as csv_file: #you can change etsy.csv to whatever your file is called
